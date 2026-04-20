@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porsche 911 GT3 RS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Roboto',sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.6;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    z-index:1000;
+}
+nav h2{color:#ff3c00;font-family:'Orbitron'}
+nav a{color:#fff;margin-left:20px;text-decoration:none;transition:.3s}
+nav a:hover{color:#ff3c00}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/7/7c/Porsche_911_GT3_RS.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;height:100%;
+    background:linear-gradient(to bottom,transparent,#0b0b0b);
+}
+.hero-content{position:relative;animation:fadeIn 2s}
+.hero h1{font-size:70px;font-family:'Orbitron'}
+.hero p{color:#ccc;margin-top:15px}
+
+/* SECTIONS */
+section{
+    padding:100px 40px;
+    max-width:1200px;
+    margin:auto;
+}
+h2{color:#ff3c00;margin-bottom:25px}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:#151515;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #222;
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#ff3c00;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    margin-top:40px;
+}
+.stat h3{
+    font-size:40px;
+    color:#ff3c00;
+}
+
+/* IMAGE BLOCK */
+.image-block{
+    margin-top:40px;
+}
+.image-block img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+}
+.image-block img:hover{transform:scale(1.05)}
+
+/* QUOTE */
+.quote{
+    text-align:center;
+    font-size:24px;
+    font-style:italic;
+    color:#ccc;
+    margin:80px auto;
+    max-width:800px;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    text-align:center;
+    padding:40px;
+    color:#777;
+}
+
+/* ANIM */
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(30px)}
+    to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>GT3 RS</h2>
+    <div>
+        <a href="#about">Bemutató</a>
+        <a href="#tech">Technológia</a>
+        <a href="#specs">Spec</a>
+        <a href="#interior">Belső</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Porsche 911 GT3 RS</h1>
+        <p>A versenypálya DNS-e az utcán</p>
+    </div>
+</div>
+
+<section id="about">
+    <h2>Bemutatkozás</h2>
+    <p>
+        A Porsche 911 GT3 RS a Porsche egyik legextrémebb utcai modellje,
+        amely közvetlenül a motorsportból származó technológiákat használ.
+        Minden részletét a teljesítmény, a leszorítóerő és a precíz irányíthatóság
+        maximalizálására tervezték.
+    </p>
+
+    <div class="stats">
+        <div class="stat">
+            <h3>525 LE</h3>
+            <p>Teljesítmény</p>
+        </div>
+        <div class="stat">
+            <h3>3.2s</h3>
+            <p>0–100 km/h</p>
+        </div>
+        <div class="stat">
+            <h3>296 km/h</h3>
+            <p>Végsebesség</p>
+        </div>
+    </div>
+</section>
+
+<section id="tech">
+    <h2>Aerodinamika & Technológia</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Aktív aerodinamika</h3>
+            <p>Az F1-ből inspirált DRS rendszer állítja a hátsó szárnyat.</p>
+        </div>
+        <div class="card">
+            <h3>Leszorítóerő</h3>
+            <p>Akár 860 kg leszorítóerő nagy sebességnél.</p>
+        </div>
+        <div class="card">
+            <h3>Könnyű szerkezet</h3>
+            <p>Karbon elemek és súlycsökkentett kialakítás.</p>
+        </div>
+    </div>
+
+    <div class="image-block">
+        <img src="porche.webp">
+    </div>
+</section>
+
+<section id="specs">
+    <h2>Műszaki adatok</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Motor</h3>
+            <p>4.0L szívó boxer</p>
+        </div>
+        <div class="card">
+            <h3>Fordulatszám</h3>
+            <p>9000 rpm</p>
+        </div>
+        <div class="card">
+            <h3>Váltó</h3>
+            <p>7 sebességes PDK</p>
+        </div>
+        <div class="card">
+            <h3>Hajtás</h3>
+            <p>Hátsókerék</p>
+        </div>
+    </div>
+</section>
+
+<section id="interior">
+    <h2>Belső tér</h2>
+    <p>
+        A GT3 RS belső tere minimalista és versenyorientált. A karbon kagylóülések,
+        Alcantara borítások és a digitális kijelzők mind a vezetési élményt szolgálják.
+    </p>
+
+    <div class="image-block">
+        <img src="beltér.jpg">
+    </div>
+</section>
+
+<div class="quote">
+    „Ez nem csak egy autó. Ez egy versenygép rendszámmal.”
+</div>
+
+<footer>
+    <p>© 2026 Porsche GT3 RS | Prémium autós webdesign</p>
+</footer>
+
+</body>
+</html>
